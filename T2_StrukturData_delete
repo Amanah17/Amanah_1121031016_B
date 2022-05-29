@@ -1,0 +1,25 @@
+Nama : Amanah
+NIM : 1121031016
+file : T2_StrukturData_Delete
+
+
+void deleteNode(TNode**head_ref,int key){
+  TNode*temp = *head_ref;
+  TNode*prev = NULL;
+  if (temp != NULL && temp->data == key){
+    *head_ref = temp->next;   //Changed head delete temp;     //free old head return;
+  }
+    else
+  {
+  while (temp != NULL && temp->data != key){
+    prev = temp;
+    temp = temp->next;
+  }
+  if (temp == NULL)
+      return;
+      
+  prev->next = temp->next;
+  
+  delete temp;
+  }
+}
