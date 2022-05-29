@@ -1,0 +1,28 @@
+# Amanah_1121031016_B
+Nama : Amanah
+NIM : 1121031016
+T2_StrukturData
+
+void search(int searchValue){
+  TNode *temp = head;
+  int found = 0;
+  int i = 0;
+  
+  if(temp != NULL){
+    while(temp != NULL){
+    i++;
+    if(temp->data == searchValue){
+      found++;
+      break;
+     }
+     temp = temp->next;
+    }
+    if (found == 1){
+      cout<<searchValue<<"is found at index = "<<i<<".\n";
+    }else{
+      cout<<searchValue<<"is not found in the list.\n";
+    }
+   }else{
+      cout<<"The list is empty.\n";
+   }
+}
